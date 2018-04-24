@@ -14,4 +14,10 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="textSex">Sex</string>
+    <string name="radioMale">Male</string>
+    <string name="radioFemale">Female</string>
+    <string name="splashContent">SplashScreen</string>
+    <string name="textDetails">Please enter your details:</string>
+    <string name="textDOB">Date of birth</string>
 </resources>
