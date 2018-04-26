@@ -14,12 +14,16 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="textFirstName">First Name</string>
+    <string name="textLastName">Last Name</string>
+    <string name="textAge">Age</string>
     <string name="textSex">Sex</string>
+    <string name="textPostcode">Postcode</string>
     <string name="radioMale">Male</string>
     <string name="radioFemale">Female</string>
     <string name="splashContent">SplashScreen</string>
-    <string name="textDetails">Please enter your details:</string>
-    <string name="textDOB">Date of birth</string>
+    <string name="textCity">City</string>
     <string name="welcomeText">Welcome!</string>
     <string name="btnLogin">Login</string>
+    <string name="btnCreateAccount">Create Account</string>
 </resources>
