@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">You Are What You Eat</string>
+    <string name="app_name">YA_WYE</string>
     <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to login -->
