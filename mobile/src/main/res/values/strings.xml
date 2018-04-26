@@ -20,4 +20,6 @@
     <string name="splashContent">SplashScreen</string>
     <string name="textDetails">Please enter your details:</string>
     <string name="textDOB">Date of birth</string>
+    <string name="welcomeText">Welcome!</string>
+    <string name="btnLogin">Login</string>
 </resources>
