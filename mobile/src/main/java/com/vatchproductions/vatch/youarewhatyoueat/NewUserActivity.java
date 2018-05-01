@@ -38,7 +38,7 @@ public class NewUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 boolean isInserted = userDB.insertData(editFirstName.getText().toString(), editLastName.getText().toString(), editSex.getText().toString(), editAge.getText().toString(), editCity.getText().toString(), editPostcode.getText().toString(), editEmail.getText().toString(), editPassword.getText().toString());
-                if (isInserted = true) {
+                if (isInserted) {
                     Toast.makeText(NewUserActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 } else {
                     Toast.makeText(NewUserActivity.this, "Data not Inserted", Toast.LENGTH_LONG).show();
