@@ -28,4 +28,6 @@
     <string name="btnCreateAccount">Create Account</string>
     <string name="buttonAddData">Add User Data</string>
     <string name="buttonViewAll">View All</string>
+    <string name="textPassword">Password</string>
+    <string name="textEmail">Email</string>
 </resources>

@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 public class NewUserActivity extends AppCompatActivity {
     DatabaseHelper userDB;
-    EditText editFirstName, editLastName, editSex, editAge, editCity, editPostcode;
+    EditText editFirstName, editLastName, editSex, editAge, editCity, editPostcode, editEmail, editPassword;
     Button btnAdd;
     Button btnViewAll;
     @Override
@@ -25,6 +25,8 @@ public class NewUserActivity extends AppCompatActivity {
         editAge = findViewById(R.id.editAge_name);
         editCity = findViewById(R.id.editCity_name);
         editPostcode = findViewById(R.id.editPostcode_name);
+        editEmail = findViewById(R.id.editEmail_name);
+        editPassword = findViewById(R.id.editPassword_name);
         btnAdd = findViewById(R.id.btnAdd);
         btnViewAll = findViewById(R.id.btnViewAll);
 
@@ -35,7 +37,7 @@ public class NewUserActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                boolean isInserted = userDB.insertData(editFirstName.getText().toString(), editLastName.getText().toString(), editSex.getText().toString(), editAge.getText().toString(), editCity.getText().toString(), editPostcode.getText().toString());
+                boolean isInserted = userDB.insertData(editFirstName.getText().toString(), editLastName.getText().toString(), editSex.getText().toString(), editAge.getText().toString(), editCity.getText().toString(), editPostcode.getText().toString(), editEmail.getText().toString(), editPassword.getText().toString());
                 if (isInserted = true) {
                     Toast.makeText(NewUserActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
                 } else {
@@ -63,6 +65,8 @@ public class NewUserActivity extends AppCompatActivity {
                     buffer.append("Age: ").append(res.getString(4)).append("\n");
                     buffer.append("City: ").append(res.getString(5)).append("\n");
                     buffer.append("Postcode: ").append(res.getString(6)).append("\n");
+                    buffer.append("Email: ").append(res.getString(7)).append("\n");
+                    buffer.append("Password: ").append(res.getString(8)).append("\n");
                 }
                 showMessage("Data", buffer.toString());
             }

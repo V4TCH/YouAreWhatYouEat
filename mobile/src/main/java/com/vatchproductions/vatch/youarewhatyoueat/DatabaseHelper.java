@@ -17,7 +17,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String AGE = "AGE";
     private static final String CITY  = "CITY";
     private static final String POSTCODE = "POSTCODE";
-    private static final String TABLE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME + " TEXT, " + SURNAME + " TEXT, " + SEX + " TEXT, " + AGE + " INTEGER, " + CITY + " TEXT, " + POSTCODE + " TEXT );";
+    private static final String EMAIL = "EMAIL";
+    private static final String PASSWORD = "PASSWORD";
+    private static final String TABLE_CREATE = "CREATE TABLE " + TABLE_NAME + " (" + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + NAME + " TEXT, " + SURNAME + " TEXT, " + SEX + " TEXT, " + AGE + " INTEGER, " + CITY + " TEXT, " + POSTCODE + " TEXT, " + EMAIL + " TEXT, "+ PASSWORD + " TEXT );";
 
 
     DatabaseHelper(Context context) {
@@ -34,7 +36,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(db);
     }
-    public boolean insertData(String name, String surname, String sex, String age, String city, String postcode) {
+    public boolean insertData(String name, String surname, String sex, String age, String city, String postcode, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(NAME, name);
@@ -43,6 +45,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(AGE, age);
         contentValues.put(CITY, city);
         contentValues.put(POSTCODE, postcode);
+        contentValues.put(EMAIL, email);
+        contentValues.put(PASSWORD, password);
         long result = db.insert(TABLE_NAME, null, contentValues);
         return result != -1;
     }
