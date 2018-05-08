@@ -8,7 +8,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:paddingTop="20dp"
-    tools:context=".LoginActivityNew">
+    tools:context=".LoginActivity">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -22,7 +22,7 @@
             android:layout_marginTop="40dp"
             android:adjustViewBounds="true"
             android:cropToPadding="true"
-            android:src="@drawable/yawye" />
+            android:src="@drawable/yawyesmall" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutEmail"

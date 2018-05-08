@@ -12,9 +12,9 @@ import java.util.List;
 
 public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdapter.UserViewHolder> {
 
-    private List<UserClass> listUsers;
+    private List<User> listUsers;
 
-    UsersRecyclerAdapter(List<UserClass> listUsers) {
+    UsersRecyclerAdapter(List<User> listUsers) {
         this.listUsers = listUsers;
     }
 

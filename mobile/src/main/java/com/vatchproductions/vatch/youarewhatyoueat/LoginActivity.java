@@ -10,10 +10,11 @@ import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
+import android.widget.Button;
 
-public class LoginActivityNew extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final AppCompatActivity activity = LoginActivityNew.this;
+    private final AppCompatActivity activity = LoginActivity.this;
     private NestedScrollView nestedScrollView;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
@@ -22,7 +23,7 @@ public class LoginActivityNew extends AppCompatActivity implements View.OnClickL
     private AppCompatButton appCompatButtonLogin;
     private AppCompatTextView textViewLinkRegister;
     private InputValidation inputValidation;
-    private DatabaseUserClass databaseUserClass;
+    private DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +50,7 @@ public class LoginActivityNew extends AppCompatActivity implements View.OnClickL
         textViewLinkRegister.setOnClickListener(this);
     }
     private void initObjects() {
-        databaseUserClass = new DatabaseUserClass(activity);
+        databaseHelper = new DatabaseHelper(activity);
         inputValidation = new InputValidation(activity);
     }
     public void onClick(View v) {
@@ -64,17 +65,17 @@ public class LoginActivityNew extends AppCompatActivity implements View.OnClickL
         }
     }
     private void verifyFromSQLite() {
-        if(!inputValidation.isInputTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if(!inputValidation.isInputEditTextFilled(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
-        if (!inputValidation.isInputTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
+        if (!inputValidation.isInputEditTextEmail(textInputEditTextEmail, textInputLayoutEmail, getString(R.string.error_message_email))) {
             return;
         }
-        if (!inputValidation.isInputTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
+        if (!inputValidation.isInputEditTextFilled(textInputEditTextPassword, textInputLayoutPassword, getString(R.string.error_message_password))) {
             return;
         }
 
-        if(databaseUserClass.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
+        if(databaseHelper.checkUser(textInputEditTextEmail.getText().toString().trim(), textInputEditTextPassword.getText().toString().trim())) {
             Intent accountsIntent = new Intent(activity, UsersListActivity.class);
             accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
             emptyInputEditText();
@@ -87,4 +88,6 @@ public class LoginActivityNew extends AppCompatActivity implements View.OnClickL
         textInputEditTextEmail.setText(null);
         textInputEditTextPassword.setText(null);
     }
+
+
 }

@@ -27,10 +27,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".NewUserActivity" />
-        <activity android:name=".LoginActivityNew" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".UsersListActivity"></activity>
+        <activity android:name=".UsersListActivity" />
+        <activity android:name=".AddItemActivity"></activity>
     </application>
 
 </manifest>
