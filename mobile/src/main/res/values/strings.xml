@@ -29,5 +29,4 @@
     <string name="hint_food_type">Food Type</string>
     <string name="hint_cal_count">Calorie Count</string>
     <string name="hint_weight">Weight (g)</string>
-
 </resources>
