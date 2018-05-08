@@ -10,8 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "UserManager.db";
+    private static final int USER_DATABASE_VERSION = 1;
+    private static final int FOOD_DATABASE_VERSION = 1;
+    private static final String FOOD_DATABASE_NAME = "FoodManager.db";
+    private static final String USER_DATABASE_NAME = "UserManager.db";
+    private static final String TABLE_FOOD = "food";
     private static final String TABLE_USER = "user";
 
     private static final String COLUMN_USER_ID = "user_id";
@@ -19,11 +22,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_USER_EMAIL = "user_email";
     private static final String COLUMN_USER_PASSWORD = "user_password";
 
+    private static final String COLUMN_FOOD_ID = "food_id";
+    private static final String COLUMN_FOOD_NAME = "food_name";
+    private static final String COLUMN_FOOD_TYPE = "food_type";
+    private static final String COLUMN_FOOD_COUNT = "food_count";
+    private static final String COLUMN_FOOD_WEIGHT = "food_weight";
+
+    private String CREATE_FOOD_TABLE = "CREATE TABLE" + TABLE_FOOD + "(" + COLUMN_FOOD_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +COLUMN_FOOD_NAME + " TEXT, " + COLUMN_FOOD_TYPE + " TEXT, " + COLUMN_FOOD_COUNT + " TEXT, " + COLUMN_FOOD_WEIGHT + " TEXT " + ")";
     private String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "(" + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT" + ")";
     private String DROP_USER_TABLE = "DROP TABLE IF EXISTS " + TABLE_USER;
+    private String DROP_FOOD_TABLE = "DROP TABLE IF EXISTS " + TABLE_FOOD;
 
     DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        super(context, USER_DATABASE_NAME, null, USER_DATABASE_VERSION);
     }
 
     @Override

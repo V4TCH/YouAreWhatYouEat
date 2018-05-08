@@ -89,8 +89,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     /**
      * This implemented method is to listen the click on view
-     *
-     * @param v
      */
     @Override
     public void onClick(View v) {
