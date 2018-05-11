@@ -32,8 +32,6 @@ public class UsersListActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("");
         initViews();
         initObjects();
-
-
     }
 
     /**

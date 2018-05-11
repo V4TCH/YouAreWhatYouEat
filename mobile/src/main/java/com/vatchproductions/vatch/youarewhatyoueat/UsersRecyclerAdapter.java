@@ -71,6 +71,4 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
             textViewFoodWeight = view.findViewById(R.id.textViewFoodWeight);
         }
     }
-
-
 }

@@ -23,7 +23,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_FOOD_CALCOUNT = "food_calcount";
     private static final String COLUMN_FOOD_WEIGHT= "food_weight";
 
-    private String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "(" + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT, " + COLUMN_FOOD_NAME + " TEXT, " + COLUMN_FOOD_TYPE + " TEXT, " + COLUMN_FOOD_CALCOUNT + " TEXT, " + COLUMN_FOOD_WEIGHT + " TEXT" + ")";
+    private String CREATE_USER_TABLE = "CREATE TABLE " + TABLE_USER + "(" + COLUMN_USER_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME
+            + " TEXT, " + COLUMN_USER_EMAIL + " TEXT, " + COLUMN_USER_PASSWORD + " TEXT, " + COLUMN_FOOD_NAME + " TEXT, " + COLUMN_FOOD_TYPE
+            + " TEXT, " + COLUMN_FOOD_CALCOUNT + " TEXT, " + COLUMN_FOOD_WEIGHT + " TEXT" + ")";
+
     private String DROP_USER_TABLE = "DROP TABLE IF EXISTS " + TABLE_USER;
 
     DatabaseHelper(Context context) {
