@@ -5,6 +5,10 @@ public class User {
     private String name;
     private String email;
     private String password;
+    private String foodname;
+    private String foodtype;
+    private String foodcalcount;
+    private String foodweight;
 
     public int getId() {
         return id;
@@ -30,4 +34,30 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getFoodName() {
+        return foodname;
+    }
+    public void setFoodName(String foodname) {
+        this.foodname = foodname;
+    }
+    public String getFoodType() {
+        return foodtype;
+    }
+    public void setFoodType(String foodtype) {
+        this.foodtype = foodtype;
+    }
+    public String getFoodCalCount() {
+        return foodcalcount;
+    }
+    public void setFoodCalCount(String foodcalcount) {
+        this.foodcalcount = foodcalcount;
+    }
+    public String getFoodWeight() {
+        return foodweight;
+    }
+    public void setFoodWeight(String foodweight) {
+        this.foodweight = foodweight;
+    }
+
 }

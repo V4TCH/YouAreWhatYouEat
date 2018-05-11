@@ -10,7 +10,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:paddingTop="20dp"
-    tools:context=".RegisterActivity">
+    tools:context=".AddItemActivity">
 
     <android.support.v7.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -27,13 +27,13 @@
             android:src="@drawable/yawyesmall" />
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutName"
+            android:id="@+id/textInputLayoutFoodName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputFoodItemName"
+                android:id="@+id/textInputEditFoodItemName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_food_name"
@@ -43,7 +43,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutFood"
+            android:id="@+id/textInputLayoutFoodType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
@@ -59,13 +59,13 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutPassword"
+            android:id="@+id/textInputLayoutFoodCalCount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditCalCount"
+                android:id="@+id/textInputEditFoodCalCount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_cal_count"
@@ -75,13 +75,13 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutConfirmPassword"
+            android:id="@+id/textInputLayoutWeight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextWeight"
+                android:id="@+id/textInputEditFoodWeight"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_weight"

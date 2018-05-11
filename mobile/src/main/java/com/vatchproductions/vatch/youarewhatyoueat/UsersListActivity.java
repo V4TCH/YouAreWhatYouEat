@@ -33,13 +33,7 @@ public class UsersListActivity extends AppCompatActivity {
         initViews();
         initObjects();
 
-        Button btnAdd = findViewById(R.id.buttonAdd);
-        btnAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(UsersListActivity.this, AddItemActivity.class));
-            }
-        });
+
     }
 
     /**
@@ -66,6 +60,14 @@ public class UsersListActivity extends AppCompatActivity {
 
         String emailFromIntent = getIntent().getStringExtra("EMAIL");
         textViewName.setText(emailFromIntent);
+
+        Button btnAdd = findViewById(R.id.buttonAdd);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(UsersListActivity.this, AddItemActivity.class));
+            }
+        });
 
         getDataFromSQLite();
     }

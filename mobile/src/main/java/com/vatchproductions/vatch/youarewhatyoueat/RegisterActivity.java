@@ -133,6 +133,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             user.setEmail(textInputEditTextEmail.getText().toString().trim());
             user.setPassword(textInputEditTextPassword.getText().toString().trim());
 
+
             databaseHelper.addUser(user);
 
             // Snack Bar to show success message that record saved successfully

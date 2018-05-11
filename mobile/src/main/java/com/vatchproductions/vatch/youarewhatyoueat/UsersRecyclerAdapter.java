@@ -33,6 +33,10 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         holder.textViewName.setText(listUsers.get(position).getName());
         holder.textViewEmail.setText(listUsers.get(position).getEmail());
         holder.textViewPassword.setText(listUsers.get(position).getPassword());
+        holder.textViewFoodName.setText(listUsers.get(position).getFoodName());
+        holder.textViewFoodType.setText(listUsers.get(position).getFoodType());
+        holder.textViewFoodCalCount.setText(listUsers.get(position).getFoodCalCount());
+        holder.textViewFoodWeight.setText(listUsers.get(position).getFoodWeight());
     }
 
     @Override
@@ -48,14 +52,23 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
     public class UserViewHolder extends RecyclerView.ViewHolder {
 
         public AppCompatTextView textViewName;
-        AppCompatTextView textViewEmail;
-        AppCompatTextView textViewPassword;
+        public AppCompatTextView textViewEmail;
+        public AppCompatTextView textViewPassword;
+        public AppCompatTextView textViewFoodName;
+        public AppCompatTextView textViewFoodType;
+        public AppCompatTextView textViewFoodCalCount;
+        public AppCompatTextView textViewFoodWeight;
+
 
         UserViewHolder(View view) {
             super(view);
             textViewName = view.findViewById(R.id.textViewName);
             textViewEmail = view.findViewById(R.id.textViewEmail);
             textViewPassword = view.findViewById(R.id.textViewPassword);
+            textViewFoodName = view.findViewById(R.id.textViewFoodName);
+            textViewFoodType = view.findViewById(R.id.textViewFoodType);
+            textViewFoodCalCount = view.findViewById(R.id.textViewCalCount);
+            textViewFoodWeight = view.findViewById(R.id.textViewFoodWeight);
         }
     }
 
