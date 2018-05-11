@@ -24,7 +24,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         // inflating recycler item view
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_user_recycler, parent, false);
-
         return new UserViewHolder(itemView);
     }
 
@@ -45,7 +44,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         return listUsers.size();
     }
 
-
     /**
      * ViewHolder class
      */
@@ -58,7 +56,6 @@ public class UsersRecyclerAdapter extends RecyclerView.Adapter<UsersRecyclerAdap
         public AppCompatTextView textViewFoodType;
         public AppCompatTextView textViewFoodCalCount;
         public AppCompatTextView textViewFoodWeight;
-
 
         UserViewHolder(View view) {
             super(view);

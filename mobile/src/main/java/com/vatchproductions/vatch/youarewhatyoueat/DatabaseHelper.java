@@ -155,10 +155,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         // selection criteria
         String selection = COLUMN_USER_EMAIL + " = ?" + " AND " + COLUMN_USER_PASSWORD + " = ?";
-
         // selection arguments
         String[] selectionArgs = {email, password};
-
         // query user table with conditions
         Cursor cursor = db.query(TABLE_USER, //Table to query
                 columns,                    //columns to return
@@ -173,7 +171,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.close();
         db.close();
         return cursorCount > 0;
-
     }
 }
 

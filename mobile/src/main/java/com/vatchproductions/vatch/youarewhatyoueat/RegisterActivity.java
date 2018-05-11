@@ -3,7 +3,6 @@ package com.vatchproductions.vatch.youarewhatyoueat;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v4.widget.NestedScrollView;
@@ -88,7 +87,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     }
 
-
     /**
      * This implemented method is to listen the click on view
      */
@@ -135,20 +133,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
             databaseHelper.addUser(user);
 
-            // Snack Bar to show success message that record saved successfully
+            // Toast to show success message that record saved successfully
             Toast.makeText(getApplicationContext(), "Registration Successful!", Toast.LENGTH_LONG).show();
-//            Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
             emptyInputEditText();
             startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-
-
         } else {
-            // Snack Bar to show error message that record already exists
+            // Toast to show error message that record already exists
             Toast.makeText(getApplicationContext(), "Email Already Exists", Toast.LENGTH_LONG).show();
-//            Snackbar.make(nestedScrollView, getString(R.string.error_email_exists), Snackbar.LENGTH_LONG).show();
         }
-
-
     }
 
     /**
